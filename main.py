@@ -268,7 +268,7 @@ def updateRobloxHWND():
             if getTitle == "Roblox" and currentHWND != robloxHWND:
                 robloxHWND = currentHWND
                 print("Roblox-HWND updated:", robloxHWND)
-        time.sleep(5)
+        time.sleep(0.2)
 
 def isRbxActive():
     return ctypes.windll.user32.GetForegroundWindow() == robloxHWND
@@ -355,12 +355,12 @@ def fixCursor(handle):
 def init():
     global toggle_button, toggle_button_str, robloxHWND, isEnabled
     os.system("cls")
-    print(f"Roblox-HWND: {robloxHWND}")
+    print(f"Roblox-HWND: Click Toggle Button In Game")
     print(f"Keybind: {toggle_button_str}")
     print(f"Enabled: {'Enabled' if isEnabled else 'Disabled'}")
     
     while robloxHWND is None:
-        time.sleep(1)
+        time.sleep(0.2)
     
     print("Roblox-HWND:", robloxHWND)
     
@@ -384,7 +384,7 @@ def toggle():
             print(f"Roblox-HWND: {robloxHWND}")
             print(f"Keybind: {toggle_button_str}")
             print(f"Enabled: {'Enabled' if isEnabled else 'Disabled'}")
-            time.sleep(1)
+            time.sleep(0.2)
         time.sleep(0.025)
 
 def string_to_button(button_str):
